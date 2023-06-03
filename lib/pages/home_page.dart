@@ -2,9 +2,10 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+  MyHomePage({super.key});
+  final player = AudioPlayer();
   void playMusic(int n) {
-    final player = AudioPlayer();
+    player.stop();
     player.play(
       AssetSource('music-$n.mp3'),
     );
